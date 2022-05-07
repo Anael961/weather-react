@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import icon from "./icon.png";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function showWeather(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       iconUrl: "",
-      date: "Sunday 14:30",
     });
   }
 
@@ -32,6 +32,7 @@ export default function Weather(props) {
                   className="form-control py-2 border-right-0 border"
                   placeholder="Search for a city"
                   autoComplete="off"
+                  autoFocus="on"
                 />
                 <div className="input-group-append">
                   <button
@@ -77,7 +78,9 @@ export default function Weather(props) {
               alt="sunny day icon"
             />
           </div>
-          <h3>{weatherData.date}</h3>
+          <h3>
+            <FormattedDate date={weatherData.date} />
+          </h3>
           <div className="row todays-highlights">
             <div className="text-capitalize weather-description">
               {weatherData.description}
