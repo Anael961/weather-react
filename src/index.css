@@ -6,6 +6,10 @@ body {
   margin: 60px auto;
 }
 
+body .loading-data {
+  color: black;
+}
+
 @media (max-width: 900px) {
   body {
     margin: 0 auto;
