@@ -79,9 +79,8 @@
 }
 
 .Weather .main-icon {
-  width: 250px;
-  margin-top: -91px;
-  margin-bottom: -55px;
+  margin-top: -34px;
+  margin-bottom: -33px;
 }
 .Weather h3 {
   margin-top: -40px;
@@ -89,7 +88,7 @@
   font-weight: 400;
 }
 .Weather .weather-description {
-  font-size: 15px;
+  font-size: 20px;
 }
 .Weather .todays-highlights {
   padding: 0 85px;
