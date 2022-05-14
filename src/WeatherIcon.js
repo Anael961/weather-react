@@ -23,11 +23,11 @@ export default function WeatherIcon(props) {
     "50n": "FOG",
   };
   return (
-    <div className="main-icon img-fluid">
+    <div>
       <ReactAnimatedWeather
         icon={codeMapping[props.code]}
         color="black"
-        size={140}
+        size={props.size}
         animate={true}
       />
     </div>

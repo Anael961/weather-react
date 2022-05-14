@@ -19,8 +19,8 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <div className="mb-5">
-        <WeatherIcon code={props.data.icon} />
+      <div className="mb-5 main-icon">
+        <WeatherIcon code={props.data.icon} size={145} />
       </div>
       <h3>
         <FormattedDate date={props.data.date} />
@@ -31,50 +31,6 @@ export default function WeatherInfo(props) {
         </div>
       </div>
       <hr />
-      <div className="row forecast">
-        <div className="col">
-          Mon
-          <br />
-          ⛅
-          <br />
-          4°C
-        </div>
-        <div className="col">
-          Tue
-          <br />
-          ⛅
-          <br />
-          0°C
-        </div>
-        <div className="col">
-          Wed
-          <br />
-          ⛅
-          <br />
-          2°C
-        </div>
-        <div className="col">
-          Thu
-          <br />
-          🌨️
-          <br />
-          1°C
-        </div>
-        <div className="col">
-          Fri
-          <br />
-          🌦️
-          <br />
-          3°C
-        </div>
-        <div className="col">
-          Sat
-          <br />
-          🌨️
-          <br />
-          7°C
-        </div>
-      </div>
     </div>
   );
 }
