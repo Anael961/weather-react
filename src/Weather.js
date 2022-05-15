@@ -65,6 +65,7 @@ export default function Weather(props) {
               <div className="input-group">
                 <input
                   type="search"
+                  title="Type a city"
                   className="form-control py-2 border-right-0 border"
                   placeholder="Search for a city"
                   autoComplete="off"
@@ -79,7 +80,11 @@ export default function Weather(props) {
                     <i className="fa fa-search"></i>
                   </button>
                   <span className="col marker-outline">
-                    <button className="location-marker" onClick={handleClick}>
+                    <button
+                      className="location-marker"
+                      title="Current Location"
+                      onClick={handleClick}
+                    >
                       <i className="fas fa-map-marker-alt"></i>
                     </button>
                   </span>
